@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "quarktips",
+	"version": "${version}",
+	"name": "QuarkTips",
+	"description": "A neutralized version of the Enchanted Book tooltips from Quark for Fabric.",
+	"authors": [
+		"all quark contributors",
+		"unilock"
+	],
+	"contact": {
+		"sources": "https://github.com/unilock/QuarkTips"
+	},
+	"license": "CC-BY-NC-SA-3.0",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"cc.unilock.quarktips.QuarkTips"
+		]
+	},
+	"mixins": [
+      "quarktips.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": ">=1.20",
+		"fabric-api": "*"
+	}
+}
