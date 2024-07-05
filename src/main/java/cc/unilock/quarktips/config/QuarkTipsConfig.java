@@ -20,4 +20,7 @@ public class QuarkTipsConfig extends ReflectiveConfig {
 		minecraft:mending=minecraft:carrot_on_a_stick
 	""")
 	public final TrackedValue<ValueList<String>> enchantingAdditionalStacks = list("");
+
+	@Comment("Screens that should not show the tooltip (bandaid fix)")
+	public final TrackedValue<ValueList<String>> enchantingBlacklistedScreens = list("", "com.unascribed.exco.client.screen.TerminalScreen");
 }
