@@ -6,7 +6,9 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.brigadier.Command;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.rendering.v1.TooltipComponentCallback;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.gui.Font;
@@ -26,6 +28,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal;
+
 public class QuarkTips implements ClientModInitializer {
 	public static final String MOD_ID = "quarktips";
 	public static final QuarkTipsConfig CONFIG = QuarkTipsConfig.createToml(FabricLoader.getInstance().getConfigDir(), "", MOD_ID, QuarkTipsConfig.class);
@@ -37,6 +41,13 @@ public class QuarkTips implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
+		ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
+			dispatcher.register(literal("quarktips").then(literal("reload").executes(ctx -> {
+				additionalStacks = null;
+				testItems = null;
+				return Command.SINGLE_SUCCESS;
+			})));
+		});
 		TooltipComponentCallback.EVENT.register((component) -> {
 			if (component instanceof FakeEnchantedBookComponent fake) {
 				EnchantmentInstance ed = getEnchantedBookEnchantment(fake.stack);
