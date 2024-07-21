@@ -94,9 +94,9 @@ public class QuarkTips implements ClientModInitializer {
 	private static EnchantmentInstance getEnchantedBookEnchantment(ItemStack stack) {
 		Map<Enchantment, Integer> enchantments = EnchantmentHelper.getEnchantments(stack);
 
-		if(enchantments.size() > 1) {
-			return null;
-		}
+//		if(enchantments.size() > 1) {
+//			return null;
+//		}
 
 		for(Enchantment enchantment : enchantments.keySet()) {
 			if(enchantment != null) {
