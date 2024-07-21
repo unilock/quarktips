@@ -140,8 +140,7 @@ public class QuarkTips implements ClientModInitializer {
 
 	public record FakeEnchantedBookComponent(ItemStack stack) implements TooltipComponent {}
 
-	public record EnchantedBookComponent(int width, int height,
-										 Enchantment enchantment, boolean tableOnly) implements ClientTooltipComponent, TooltipComponent {
+	public record EnchantedBookComponent(int width, int height, Enchantment enchantment, boolean tableOnly) implements ClientTooltipComponent {
 
 		@Override
 		public void renderImage(@NotNull Font font, int tooltipX, int tooltipY, @NotNull GuiGraphics guiGraphics) {

@@ -22,7 +22,7 @@ public class EnchantedBookItemMixin extends Item {
 	@Override
 	@NotNull
 	public Optional<TooltipComponent> getTooltipImage(ItemStack stack) {
-		if(Minecraft.getInstance().screen != null && !CONFIG.enchantingBlacklistedScreens.value().contains(Minecraft.getInstance().screen.getClass().getName())) {
+		if(stack != null && Minecraft.getInstance().screen != null && !CONFIG.enchantingBlacklistedScreens.value().contains(Minecraft.getInstance().screen.getClass().getName())) {
 			return Optional.of(new QuarkTips.FakeEnchantedBookComponent(stack));
 		}
 		return Optional.empty();
