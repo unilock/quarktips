@@ -13,11 +13,11 @@ public class QuarkTipsConfig extends ReflectiveConfig {
 		"the_bumblezone:crystal_cannon", "the_bumblezone:honey_crystal_shield", "the_bumblezone:honey_bee_leggings_2");
 
 	@Comment("""
-		A list of additional stacks to display on each enchantment
-		The format is as follows:
-		enchant_id=item1,item2,item3...
-		So to display a carrot on a stick on a mending book, for example, you use:
-		minecraft:mending=minecraft:carrot_on_a_stick
+	A list of additional stacks to display on each enchantment
+	The format is as follows:
+	enchant_id=item1,item2,item3...
+	So to display a carrot on a stick on a mending book, for example, you use:
+	minecraft:mending=minecraft:carrot_on_a_stick
 	""")
 	public final TrackedValue<ValueList<String>> enchantingAdditionalStacks = list("");
 
