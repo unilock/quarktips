@@ -5,7 +5,8 @@
 	"name": "QuarkTips",
 	"description": "A neutralized version of the Enchanted Book tooltips from Quark for Fabric.",
 	"authors": [
-		"all quark contributors",
+		"All BetterEnchantedBooks contributors",
+		"All Quark contributors",
 		"unilock"
 	],
 	"contact": {

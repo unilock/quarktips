@@ -2,8 +2,10 @@
 
 A neutralized version of the Enchanted Book tooltips from Quark for Fabric.
 
-Only works correctly for Enchanted Books with one enchantment; Enchanted Books with more than one enchantment will only show data for the first enchantment in their NBT.
+Currently renders on all items, not just Enchanted Books.
 
-Most code is borrowed from [Quark](https://github.com/VazkiiMods/Quark/blob/139dee65010e05700092ddf3fb1104e0de3da230/LICENSE.md) and [Zeta](https://github.com/VazkiiMods/Zeta/blob/ccac3d9b1ce9a5ad6a8a86c064041cf7cca067b0/LICENSE.md), licensed CC-BY-NC-SA-3.0.
-- QuarkTips.java borrows from [EnchantedBookTooltips.java](https://github.com/VazkiiMods/Quark/blob/139dee65010e05700092ddf3fb1104e0de3da230/src/main/java/org/violetmoon/quark/content/client/tooltip/EnchantedBookTooltips.java)
-- ItemNBTHelper.java borrows from [ItemNBTHelper.java](https://github.com/VazkiiMods/Zeta/blob/ccac3d9b1ce9a5ad6a8a86c064041cf7cca067b0/src/main/java/org/violetmoon/zeta/util/ItemNBTHelper.java)
+- `QuarkTips` borrows from [`EnchantedBookTooltips`](https://github.com/VazkiiMods/Quark/blob/139dee65010e05700092ddf3fb1104e0de3da230/src/main/java/org/violetmoon/quark/content/client/tooltip/EnchantedBookTooltips.java), licensed CC-BY-NC-SA-3.0
+- `QuarkTips$FakeEnchantmentComponent` borrows from [`IconTooltipDataText`](https://github.com/Bernasss12/BetterEnchantedBooks/blob/6ee2983ccc0896ce1552c76e535a2a8c3d9168d2/src/main/java/dev/bernasss12/bebooks/util/text/IconTooltipDataText.java), licensed MIT
+- `ClientTextTooltipAccessor` borrows from [`OrderedTextTooltipComponentAccessor`](https://github.com/Bernasss12/BetterEnchantedBooks/blob/6ee2983ccc0896ce1552c76e535a2a8c3d9168d2/src/main/java/dev/bernasss12/bebooks/mixin/OrderedTextTooltipComponentAccessor.java), licensed MIT
+- `GuiGraphicsMixin` borrows from [`DrawContextMixin`](https://github.com/Bernasss12/BetterEnchantedBooks/blob/6ee2983ccc0896ce1552c76e535a2a8c3d9168d2/src/main/java/dev/bernasss12/bebooks/mixin/DrawContextMixin.java), licensed MIT
+- `ItemStackMixin` borrows from [`ItemStackMixin`](https://github.com/Bernasss12/BetterEnchantedBooks/blob/6ee2983ccc0896ce1552c76e535a2a8c3d9168d2/src/main/java/dev/bernasss12/bebooks/mixin/ItemStackMixin.java), licensed MIT
