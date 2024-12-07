@@ -19,8 +19,9 @@ import static cc.unilock.quarktips.QuarkTips.CONFIG;
 public abstract class ItemStackMixin {
 	@Inject(method = "method_17869", at = @At("TAIL"))
 	private static void method_17869(List<Component> tooltipComponents, CompoundTag compoundTag, Enchantment enchantment, CallbackInfo ci) {
-		if(Minecraft.getInstance().screen != null && !CONFIG.enchantingBlacklistedScreens.value().contains(Minecraft.getInstance().screen.getClass().getName())) {
+		if (QuarkTips.isEnchantedBook.get() && Minecraft.getInstance().screen != null && !CONFIG.enchantingBlacklistedScreens.value().contains(Minecraft.getInstance().screen.getClass().getName())) {
 			tooltipComponents.add(new QuarkTips.FakeEnchantmentComponent(enchantment));
+			QuarkTips.isEnchantedBook.remove();
 		}
 	}
 }

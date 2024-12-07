@@ -33,6 +33,7 @@ import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.lit
 public class QuarkTips implements ClientModInitializer {
 	public static final String MOD_ID = "quarktips";
 	public static final QuarkTipsConfig CONFIG = QuarkTipsConfig.createToml(FabricLoader.getInstance().getConfigDir(), "", MOD_ID, QuarkTipsConfig.class);
+	public static final ThreadLocal<Boolean> isEnchantedBook = ThreadLocal.withInitial(() -> Boolean.FALSE);
 
 	private static List<ItemStack> testItems = null;
 	private static Multimap<Enchantment, ItemStack> additionalStacks = null;

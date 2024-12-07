@@ -3,6 +3,7 @@
   "package": "cc.unilock.quarktips.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "AbstractContainerScreenMixin",
     "ClientTextTooltipAccessor",
     "GuiGraphicsMixin",
     "ItemStackMixin"
